@@ -1,16 +1,23 @@
 import Header from './components/Header';
+import Main from './components/Main';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './components/styled/Global.styled';
-import { Logo, Nav } from './components/styled/Header.styled';
-import { Button } from './components/styled/Button.styled';
+import Footer from './components/Footer';
+
 
 
 const theme = {
   colors: {
     header: '#9bbdd5ff',
-    color: '#ff0000 ',
+    color: '#674bb1',
     footer: '#003333',
-  }
+    h1: '#ffffff',
+    background: '#674bb1',
+    purple: 'hsl(257, 40%, 49%)',
+    magenta: 'hsl(300, 69%, 71%)',
+  },
+  mobile: '768px',
+
 }
 
 function App() {
@@ -18,11 +25,9 @@ function App() {
     
   <ThemeProvider theme={theme}>
     <GlobalStyles />  
-  
-  <Header >
-    
-    </Header>
- 
+    <Header />
+    <Main />
+    <Footer />
   </ThemeProvider>  
    
   )
