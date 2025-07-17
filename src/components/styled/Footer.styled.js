@@ -2,22 +2,30 @@ import styled from "styled-components";
 import { HeartOutlined, HomeOutlined, SmileOutlined } from '@ant-design/icons';
 
 export const StyledFooter = styled.div`
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    position: relative;
+     width: 100%;
+    margin-top: auto;
+    
     
 
     div {
     display: flex;
     justify-content: end;
-    gap: 3rem;
-    margin-right: 3rem;
-    padding: 3rem;
+    gap: 3em;
+    margin-right: 4em;
+    padding: rem;
     color: white; 
     }
-
-`
+  @media(max-width: ${({ theme}) => theme.tablet}){
+    div {
+    justify-content: center;
+    gap: 1.5em;
+    }
+  }
+    @media (max-width: ${({theme}) => theme.mobile}){
+    gap: 1em;
+    }
+` 
 
     export const StyledHeartIcon = styled(HeartOutlined)`
         color: white;
@@ -39,6 +47,7 @@ export const StyledHomeIcon = styled(HomeOutlined)`
         border-radius: 50%;
         padding: 5px;
         &:hover {
+        border-color:${({theme}) => theme.colors.magenta};
         color: ${({theme}) => theme.colors.magenta};
   }
 `
@@ -49,6 +58,7 @@ color: white;
         border-radius: 50%;
         padding: 5px;
         &:hover {
+        border-color:${({theme}) => theme.colors.magenta};
         color: ${({theme}) => theme.colors.magenta};
   }
 `

@@ -17,6 +17,7 @@ const theme = {
     magenta: 'hsl(300, 69%, 71%)',
   },
   mobile: '768px',
+  tablet: '1100px'
 
 }
 
